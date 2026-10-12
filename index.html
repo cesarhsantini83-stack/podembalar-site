@@ -18,22 +18,23 @@
     background:#fff;
     line-height:1.5;
   }
-  header{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:24px 32px;
-    border-bottom:1px solid #eee;
-  }
+  header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px 32px;padding:24px 32px;border-bottom:1px solid #eee;}
   header img{height:40px;}
   nav a{
     font-family:"loos-extrawide", sans-serif;
     font-weight:700;
     color:var(--navy);
     text-decoration:none;
-    margin-left:32px;
-    font-size:15px;
+    margin-left:24px;
+    font-size:13px;
     letter-spacing:.02em;
   }
   nav a:hover{color:var(--cyan);}
+  .btn-loja{background:var(--cyan);color:#fff;padding:10px 20px;border-radius:6px;}
+  nav a.btn-loja:hover{color:#fff;background:var(--navy);}
+  nav{display:flex;flex-wrap:wrap;align-items:center;row-gap:8px;}
+  nav a:first-child{margin-left:0;}
+  @media(max-width:900px){nav a{margin-left:0;margin-right:20px;}nav a.btn-loja{margin-right:0;}}
   .hero{
     background:var(--navy);
     color:#fff;
@@ -76,17 +77,20 @@
   }
   .posts{
     display:grid;
+    grid-template-columns:repeat(2,1fr);
     gap:24px;
   }
   .post-card{
     border:1px solid #eee;
     border-radius:8px;
-    padding:24px;
+    overflow:hidden;
     display:block;
     text-decoration:none;
     color:var(--navy);
   }
   .post-card:hover{border-color:var(--cyan);}
+  .post-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#f3f5f7;}
+  .post-card .txt{padding:24px;}
   .post-card h3{
     font-family:"loos-extrawide", sans-serif;
     font-weight:700;
@@ -97,6 +101,7 @@
     font-size:15px;
     opacity:.75;
   }
+  @media(max-width:640px){.posts{grid-template-columns:1fr;}}
   .empty-state{
     color:#888;
     font-size:15px;
@@ -114,10 +119,14 @@
 <body>
 
 <header>
-  <img src="assets/logo-PodEmbalar.png" alt="PodEmbalar">
+  <a href="/"><img src="/assets/logo-PodEmbalar.png" alt="PodEmbalar"></a>
   <nav>
-    <a href="https://www.podembalar.com.br">Loja</a>
+    <a href="https://www.podembalar.com.br/potes-de-vidro">Potes de Vidro</a>
+    <a href="https://www.podembalar.com.br/garrafas">Garrafas de Vidro</a>
+    <a href="https://www.podembalar.com.br/copos-de-vidro">Copos de Vidro</a>
+    <a href="https://www.podembalar.com.br/farmaceuticos">Farmacêuticos</a>
     <a href="/blog/">Blog</a>
+    <a class="btn-loja" href="https://www.podembalar.com.br">Loja</a>
   </nav>
 </header>
 
@@ -130,13 +139,26 @@
 <main>
   <div class="section-title">Artigos recentes</div>
   <div class="posts" id="posts">
+    <a class="post-card" href="/blog/como-embalar-mel-para-nao-vazar-no-transporte/">
+      <img src="/blog/como-embalar-mel-para-nao-vazar-no-transporte/pote-de-vidro-com-mel-embalado-em-caixa-para-envio-4x3.jpg" alt="Pote de vidro com mel embalado em plástico bolha e papel kraft dentro de uma caixa de papelão" loading="lazy">
+      <div class="txt">
+        <h3>Como embalar mel pra não vazar no transporte</h3>
+        <p>O que realmente causa vazamento de mel na entrega, e como embalar certo pra ele chegar inteiro: vedação, espaço de ar e proteção na caixa.</p>
+      </div>
+    </a>
     <a class="post-card" href="/blog/vidro-ou-plastico-para-vender-mel/">
-      <h3>Vidro ou plástico para vender mel: como escolher a embalagem certa</h3>
-      <p>Vidro, PET ou squeeze? Veja as diferenças reais entre os tipos de embalagem de mel e qual funciona melhor pra cada canal de venda.</p>
+      <img src="/blog/vidro-ou-plastico-para-vender-mel/capa.jpg" alt="Pote de vidro com mel ao lado de uma bisnaga plástica em formato de urso" loading="lazy">
+      <div class="txt">
+        <h3>Vidro ou plástico para vender mel: como escolher a embalagem certa</h3>
+        <p>Vidro, PET ou squeeze? Veja as diferenças reais entre os tipos de embalagem de mel e qual funciona melhor pra cada canal de venda.</p>
+      </div>
     </a>
     <a class="post-card" href="/blog/como-esterilizar-pote-de-vidro-reutilizado/">
-      <h3>Como esterilizar pote de vidro reutilizado pra guardar geleia em casa</h3>
-      <p>Reaproveitar pote de vidro pra guardar geleia? Veja como esterilizar na água ou no micro-ondas, e quando descartar o pote.</p>
+      <img src="/blog/como-esterilizar-pote-de-vidro-reutilizado/capa.jpg" alt="Potes de vidro reaproveitados para geleia" loading="lazy">
+      <div class="txt">
+        <h3>Como esterilizar pote de vidro reutilizado pra guardar geleia em casa</h3>
+        <p>Reaproveitar pote de vidro pra guardar geleia? Veja como esterilizar na água ou no micro-ondas, e quando descartar o pote.</p>
+      </div>
     </a>
   </div>
 </main>
