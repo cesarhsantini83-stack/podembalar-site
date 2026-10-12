@@ -57,21 +57,27 @@
     font-size:18px;
   }
   header{
-    display:flex;align-items:center;justify-content:space-between;
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px 32px;
     padding:24px 32px;
     border-bottom:1px solid #eee;
   }
   header img{height:40px;}
+  nav{display:flex;flex-wrap:wrap;align-items:center;row-gap:8px;}
   nav a{
     font-family:"loos-extrawide", sans-serif;
     font-weight:700;
     color:var(--navy);
     text-decoration:none;
-    margin-left:32px;
-    font-size:15px;
+    margin-left:24px;
+    font-size:13px;
     letter-spacing:.02em;
   }
+  nav a:first-child{margin-left:0;}
   nav a:hover{color:var(--cyan);}
+  .btn-loja{background:var(--cyan);color:#fff;padding:10px 20px;border-radius:6px;}
+  nav a.btn-loja:hover{color:#fff;background:var(--navy);}
+  @media(max-width:900px){nav a{margin-left:0;margin-right:20px;}nav a.btn-loja{margin-right:0;}}
+  .data{display:block;font-size:14px;color:#777;margin:-8px 0 24px;}
   article{
     max-width:680px;
     margin:0 auto;
@@ -136,14 +142,19 @@
 <header>
   <a href="/"><img src="/assets/logo-PodEmbalar.png" alt="PodEmbalar"></a>
   <nav>
-    <a href="https://www.podembalar.com.br">Loja</a>
+    <a href="https://www.podembalar.com.br/potes-de-vidro">Potes de Vidro</a>
+    <a href="https://www.podembalar.com.br/garrafas">Garrafas de Vidro</a>
+    <a href="https://www.podembalar.com.br/copos-de-vidro">Copos de Vidro</a>
+    <a href="https://www.podembalar.com.br/farmaceuticos">Farmacêuticos</a>
     <a href="/blog/">Blog</a>
+    <a class="btn-loja" href="https://www.podembalar.com.br">Loja</a>
   </nav>
 </header>
 
 <article>
   <div class="eyebrow">Embalagem</div>
   <h1>Vidro ou plástico para vender mel: como escolher a embalagem certa</h1>
+  <time class="data" datetime="2026-09-29">29 de setembro de 2026</time>
 
   <img class="capa" src="capa.jpg" width="1254" height="1254" alt="Pote de vidro com mel ao lado de uma bisnaga plástica em formato de urso com mel, em cima de uma mesa de madeira com favo de mel e um mexedor de madeira" fetchpriority="high" decoding="async">
 

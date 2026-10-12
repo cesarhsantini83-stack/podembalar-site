@@ -22,9 +22,13 @@
   main{max-width:900px;margin:0 auto;padding:64px 32px;}
   h1{font-family:"loos-extrawide", sans-serif;font-weight:700;font-size:32px;margin-bottom:40px;}
   .posts{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
-  .post-card{border:1px solid #eee;border-radius:8px;overflow:hidden;display:block;text-decoration:none;color:var(--navy);}
+  .post-card{border:1px solid #eee;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--navy);}
   .post-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#f3f5f7;}
-  .post-card .txt{padding:24px;}
+  .post-card .txt{padding:24px;flex:1;display:flex;flex-direction:column;}
+  .post-card .ver-mais{margin-top:auto;padding-top:16px;font-family:"loos-extrawide", sans-serif;font-weight:700;font-size:13px;letter-spacing:.02em;color:var(--cyan);}
+  .post-card .ver-mais::after{content:" →";}
+  .post-card:hover .ver-mais{text-decoration:underline;}
+  .post-card .data{display:block;font-size:13px;color:#777;margin-bottom:6px;}
   .post-card:hover{border-color:var(--cyan);}
   .post-card h3{font-family:"loos-extrawide", sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;}
   .post-card p{font-size:15px;opacity:.75;}
@@ -53,22 +57,28 @@
     <a class="post-card" href="/blog/como-embalar-mel-para-nao-vazar-no-transporte/">
       <img src="/blog/como-embalar-mel-para-nao-vazar-no-transporte/pote-de-vidro-com-mel-embalado-em-caixa-para-envio-4x3.jpg" alt="Pote de vidro com mel embalado em plástico bolha e papel kraft dentro de uma caixa de papelão" loading="lazy">
       <div class="txt">
+        <time class="data" datetime="2026-10-05">5 de outubro de 2026</time>
         <h3>Como embalar mel pra não vazar no transporte</h3>
         <p>O que realmente causa vazamento de mel na entrega, e como embalar certo pra ele chegar inteiro: vedação, espaço de ar e proteção na caixa.</p>
+        <span class="ver-mais">Ver mais</span>
       </div>
     </a>
     <a class="post-card" href="/blog/vidro-ou-plastico-para-vender-mel/">
       <img src="/blog/vidro-ou-plastico-para-vender-mel/capa.jpg" alt="Pote de vidro com mel ao lado de uma bisnaga plástica em formato de urso" loading="lazy">
       <div class="txt">
+        <time class="data" datetime="2026-09-29">29 de setembro de 2026</time>
         <h3>Vidro ou plástico para vender mel: como escolher a embalagem certa</h3>
         <p>Vidro, PET ou squeeze? Veja as diferenças reais entre os tipos de embalagem de mel e qual funciona melhor pra cada canal de venda.</p>
+        <span class="ver-mais">Ver mais</span>
       </div>
     </a>
     <a class="post-card" href="/blog/como-esterilizar-pote-de-vidro-reutilizado/">
       <img src="/blog/como-esterilizar-pote-de-vidro-reutilizado/capa.jpg" alt="Potes de vidro reaproveitados para geleia" loading="lazy">
       <div class="txt">
+        <time class="data" datetime="2026-09-26">26 de setembro de 2026</time>
         <h3>Como esterilizar pote de vidro reutilizado pra guardar geleia em casa</h3>
         <p>Reaproveitar pote de vidro pra guardar geleia? Veja como esterilizar na água ou no micro-ondas, e quando descartar o pote.</p>
+        <span class="ver-mais">Ver mais</span>
       </div>
     </a>
   </div>
